@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "sourceMap": true,
+    "lib": ["esnext"],
+    "outDir": "./dist",
+    "rootDir": "./",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "strict": true
+  },
+  "ts-node": {
+    "transpileOnly": true
+  },
+  "include": ["src", "IArrayGrouper.ts", "ArrayGrouper.ts"],
+  "exclude": ["node_modules"],
+}
