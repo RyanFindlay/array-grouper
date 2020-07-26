@@ -12,7 +12,7 @@ npm i array-grouper-twig
 
 ## Usage
 
-In order to use this array grouper, simply require the `groupArrayElements` method and call it as shown below.
+In order to use this array grouper, simply import the `groupArrayElements` method and call it as shown below.
 
 ```ts
 import { groupArrayElements } from "array-grouper-twig";
