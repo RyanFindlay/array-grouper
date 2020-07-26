@@ -1,6 +1,8 @@
-import { IArrayGrouper } from "./IArrayGrouper";
+interface IArrayGrouper {
+  groupArrayElements(array: number[], numberOfArrays: number): number[][];
+}
 
-export class ArrayGrouper implements IArrayGrouper {
+export default class ArrayGrouper implements IArrayGrouper {
   /**
    * Splits an array into N number of equally sized arrays.
    * Where the array is not equally divisible by N, the final
@@ -20,7 +22,7 @@ export class ArrayGrouper implements IArrayGrouper {
     if (!array.length) {
       throw new Error("array cannot be empty");
     }
-    
+
     if (numberOfArrays > array.length) {
       throw new Error("numberOfArrays must be <= array.length");
     }

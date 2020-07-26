@@ -1,8 +1,9 @@
 {
   "name": "array-grouper-twig",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "A method that can be used to split an array of numbers into smaller N number of arrays.",
   "main": "./dist/ArrayGrouper.js",
+  "types": "./dist/ArrayGrouper.d.ts",
   "directories": {
     "test": "test"
   },
