@@ -15,7 +15,7 @@ npm i array-grouper
 In order to use this array grouper, simply require the `groupArrayElements` method and call it as shown below.
 
 ```js
-const { groupArrayElements } = require("array-grouper");
+const { groupArrayElements } = require("array-grouper-twig");
 
 var result = groupArrayElements([1, 2, 3, 4, 5], 3);
 //result = [ [ 1, 2], [ 3, 4 ], [ 5 ] ]
