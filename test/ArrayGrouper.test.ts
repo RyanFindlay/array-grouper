@@ -1,23 +1,21 @@
-import { ArrayGrouper } from "../ArrayGrouper";
-
-let arrayGrouper = new ArrayGrouper();
+import { groupArrayElements } from "../ArrayGrouper";
 
 describe("groupArrayElements", () => {
   test("should return error message when numberOfArrays equals zero", () => {
     expect(() => {
-      arrayGrouper.groupArrayElements([0], 0);
+      groupArrayElements([0], 0);
     }).toThrowError("numberOfArrays must be > 0");
   });
 
   test("should return error message when given an empty array", () => {
     expect(() => {
-      arrayGrouper.groupArrayElements([], 5);
+      groupArrayElements([], 5);
     }).toThrowError("array cannot be empty");
   });
 
   test("should return error message when numberOfArrays is greater than the length of array", () => {
     expect(() => {
-      arrayGrouper.groupArrayElements([1, 2, 3, 4, 5], 10);
+      groupArrayElements([1, 2, 3, 4, 5], 10);
     }).toThrowError("numberOfArrays must be <= array.length");
   });
 
@@ -29,7 +27,7 @@ describe("groupArrayElements", () => {
   `(
     "should return an array containing the input array when numberOfArrays equals one",
     ({ array }) => {
-      expect(arrayGrouper.groupArrayElements(array, 1)).toEqual([array]);
+      expect(groupArrayElements(array, 1)).toEqual([array]);
     }
   );
 
@@ -41,7 +39,7 @@ describe("groupArrayElements", () => {
   `(
     "should return the correct result when the original array is equally divisible by numberOfArrays",
     ({ array, numberOfArrays, result }) => {
-      expect(arrayGrouper.groupArrayElements(array, numberOfArrays)).toEqual(
+      expect(groupArrayElements(array, numberOfArrays)).toEqual(
         result
       );
     }
@@ -54,14 +52,14 @@ describe("groupArrayElements", () => {
   `(
     "should return the correct result when the original array is NOT equally divisible by numberOfArrays",
     ({ array, numberOfArrays, result }) => {
-      expect(arrayGrouper.groupArrayElements(array, numberOfArrays)).toEqual(
+      expect(groupArrayElements(array, numberOfArrays)).toEqual(
         result
       );
     }
   );
 
   test("should return correct result when given input shown on challenge description", () => {
-    expect(arrayGrouper.groupArrayElements([1, 2, 3, 4, 5], 3)).toEqual([
+    expect(groupArrayElements([1, 2, 3, 4, 5], 3)).toEqual([
       [1, 2],[3, 4],[5]
     ]);
   });
