@@ -7,7 +7,7 @@ Array Grouper splits a given array of numbers into N smaller arrays where the le
 ## Installation
 
 ```bash
-npm i array-grouper
+npm i array-grouper-twig
 ```
 
 ## Usage
